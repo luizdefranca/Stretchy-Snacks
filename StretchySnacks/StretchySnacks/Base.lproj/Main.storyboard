@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StretchySnacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwr-eS-XJY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNACKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-Kd-s2B" userLabel="SNACKS">
+                                        <rect key="frame" x="154.5" y="26.5" width="66" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-Ud-gEF">
+                                        <rect key="frame" x="337" y="14.5" width="30" height="45"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <state key="normal" title="＋">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ax2-Jj-lwT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="17m-Xw-LA2" userLabel="height = 84"/>
+                                    <constraint firstItem="RaQ-Ud-gEF" firstAttribute="top" secondItem="lwr-eS-XJY" secondAttribute="top" constant="14.5" id="3JL-a4-YtZ"/>
+                                    <constraint firstItem="Wi2-Kd-s2B" firstAttribute="centerX" secondItem="lwr-eS-XJY" secondAttribute="centerX" id="AcI-7M-caz"/>
+                                    <constraint firstItem="Wi2-Kd-s2B" firstAttribute="centerY" secondItem="lwr-eS-XJY" secondAttribute="centerY" constant="5" identifier="TitleCenterY" id="JSo-jI-ipJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RaQ-Ud-gEF" secondAttribute="trailing" constant="8" id="LfB-57-DuH"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f1f-Qe-PH0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="cq0-HI-mWp" imageView="bev-uO-xZl" style="IBUITableViewCellStyleDefault" id="R8e-cP-vK0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R8e-cP-vK0" id="TjS-bf-pL8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cq0-HI-mWp">
+                                                    <rect key="frame" x="79" y="0.0" width="281" height="53.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="oreos" id="bev-uO-xZl">
+                                                    <rect key="frame" x="15" y="0.0" width="49" height="53.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JVl-8v-O6j"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eT5-id-gHH"/>
+                                    <outlet property="prefetchDataSource" destination="BYZ-38-t0r" id="Aat-sN-tgi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lwr-eS-XJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JVk-mY-xpB"/>
+                            <constraint firstItem="f1f-Qe-PH0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zfn-zg-xYN"/>
+                            <constraint firstItem="f1f-Qe-PH0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hEt-BF-KG9"/>
+                            <constraint firstItem="f1f-Qe-PH0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sFf-8b-vQh"/>
+                            <constraint firstItem="lwr-eS-XJY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vsp-h0-lDa"/>
+                            <constraint firstItem="f1f-Qe-PH0" firstAttribute="top" secondItem="lwr-eS-XJY" secondAttribute="bottom" id="yPr-f2-bnY"/>
+                            <constraint firstItem="lwr-eS-XJY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zD2-yn-18U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="RaQ-Ud-gEF" id="j7M-W0-MZr"/>
+                        <outlet property="menuHeightConstraint" destination="17m-Xw-LA2" id="HKA-72-Iie"/>
+                        <outlet property="menuView" destination="lwr-eS-XJY" id="iva-ww-ypg"/>
+                        <outlet property="snackTableView" destination="f1f-Qe-PH0" id="UYg-OE-59N"/>
+                        <outlet property="titleLabel" destination="Wi2-Kd-s2B" id="Yc6-n2-Odx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="oreos" width="473" height="514"/>
+    </resources>
+</document>
